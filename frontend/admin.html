@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Quản lý Người Dùng và Âm Nhạc</title>
+
+    <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+    <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+    <style>
+        .hidden {
+            display: none;
+        }
+        .btn-edit {
+            margin-right: 10px; /* Tạo khoảng cách giữa nút "Chỉnh sửa" và nút "Xóa" */
+        }
+    </style>
+    
+</head>
+
+<body id="page-top">
+
+    <div id="wrapper">
+
+        <!-- Sidebar -->
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center"onclick="logout()">
+                <div class="sidebar-brand-icon rotate-n-15">
+                    <i class="fas fa-laugh-wink"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Quản lý</div>
+            </a>
+            <hr class="sidebar-divider my-0">
+            <li class="nav-item active">
+                <a class="nav-link" href="#" onclick="showTable('user')">
+                    <i class="fas fa-fw fa-users"></i>
+                    <span>Người Dùng</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" onclick="showTable('music')">
+                    <i class="fas fa-fw fa-music"></i>
+                    <span>Âm Nhạc</span></a>
+            </li>
+            <hr class="sidebar-divider d-none d-md-block">
+            <div class="text-center d-none d-md-inline">
+                <button class="rounded-circle border-0" id="sidebarToggle"></button>
+            </div>
+        </ul>
+        <!-- End of Sidebar -->
+
+        <!-- Content Wrapper -->
+        <div id="content-wrapper" class="d-flex flex-column">
+
+            <!-- Main Content -->
+            <div id="content">
+                <div class="container-fluid">
+
+                    <!-- Quản lý Người Dùng -->
+                    <div class="card shadow mb-4" id="userTable">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Danh Sách Người Dùng</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <input type="text" id="userSearch" placeholder="Tìm kiếm người dùng..." oninput="searchUsers()" class="form-control mb-3">
+                                <table class="table table-bordered" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Tên Người Dùng</th>
+                                            <th>Email</th>
+                                            <th>Tên Đầy Đủ</th>
+                                            <th>Số Điện Thoại</th>
+                                            <th>Mã ví điện tử</th>
+                                            <th>Hành Động</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="userTableBody">
+                                        <!-- Nội dung động sẽ được thêm vào đây -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Quản lý Âm Nhạc -->
+                    <div class="card shadow mb-4 hidden" id="musicTable">
+                        <div class="card-header py-3">
+                            <h6 class="m-0 font-weight-bold text-primary">Danh Sách Âm Nhạc</h6>
+                        </div>
+                        <div class="card-body">
+                            <div class="table-responsive">
+                                <input type="text" id="musicSearch" placeholder="Tìm kiếm âm nhạc..." oninput="searchMusic()" class="form-control mb-3">
+                                <table class="table table-bordered" width="100%" cellspacing="0">
+                                    <thead>
+                                        <tr>
+                                            <th>Tên Beat</th>
+                                            <th>Link</th>
+                                            <th>Giá</th>
+                                            <th>Nhạc sĩ</th>
+                                            <th>Thể loại</th>
+                                            <th>Đã đăng</th>
+                                            <th>Đã bán</th>
+                                            <th>Hành Động</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody id="musicTableBody">
+                                        <!-- Nội dung động sẽ được thêm vào đây -->
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- End of Main Content -->
+
+            <!-- Footer -->
+            <footer class="sticky-footer bg-white">
+                <div class="container my-auto">
+                    <div class="copyright text-center my-auto">
+                        <span>Copyright &copy; Your Website 2024</span>
+                    </div>
+                </div>
+            </footer>
+            <!-- End of Footer -->
+        </div>
+        <!-- End of Content Wrapper -->
+
+    </div>
+    <!-- End of Page Wrapper -->
+
+    <a class="scroll-to-top rounded" href="#page-top">
+        <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- Core plugin JavaScript-->
+    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="js/sb-admin-2.min.js"></script>
+    <!-- Page level plugins -->
+    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
+    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <!-- Page level custom scripts -->
+    <script src="js/demo/datatables-demo.js"></script>
+
+    <!-- JavaScript to fetch API and toggle tables -->
+
+    <script>
+        // Lấy token từ localStorage
+        const token = localStorage.getItem('authToken');
+        console.log({ token });
+    
+        // Kiểm tra xem token có tồn tại hay không
+        if (!token) {
+            alert('Bạn phải đăng nhập để truy cập trang này.');
+            window.location.href = '/login.html'; // Chuyển hướng về trang login nếu không có token
+        } else {
+            // Cấu hình yêu cầu
+            const requestOptions = {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                },
+            };
+    
+            // Gửi yêu cầu xác thực token và lấy dữ liệu âm nhạc
+            fetch('http://localhost:8181/api/admin/musics', requestOptions)
+                .then((response) => {
+                    if (!response.ok) {
+                        // Nếu token không hợp lệ, chuyển hướng về trang đăng nhập
+                        alert('Token không hợp lệ hoặc lỗi xác thực.');
+                        window.location.href = '/login.html';
+                        throw new Error('Token không hợp lệ.');
+                    }
+                    return response.json(); // Trả về dữ liệu JSON nếu hợp lệ
+                })
+                .then((responseData) => {
+                    if (responseData && responseData.data && responseData.data.items) {
+                        const musicTableBody = document.querySelector("#musicTableBody");
+                        musicTableBody.innerHTML = ''; // Xóa nội dung bảng trước khi thêm dữ liệu mới
+    
+                        const musicList = responseData.data.items; // Lấy danh sách âm nhạc
+                        musicList.forEach((track) => {
+                            // Tạo dòng mới trong bảng cho mỗi bản nhạc
+                            const row = `
+                                <tr>
+                                    <td>${track.titleResponse || 'Chưa có tên'}</td>
+                                    <td><a href="${track.fullUrlResponse || '#'}" target="_blank">Link</a></td>
+                                    <td>${track.priceResponse || 'Chưa có giá'}</td>
+                                    <td>${track.composerNameResponse || 'Chưa có thông tin'}</td>
+                                    <td>${track.categoryNameResponse || 'Chưa có thể loại'}</td>
+                                    <td>${track.purchasedResponse ? 'Đã mua' : 'Chưa mua'}</td>
+                                    <td>${track.approvedResponse ? 'Đã duyệt' : 'Chưa duyệt'}</td>
+                                    <td>
+                                        <button class="btn btn-primary btn-edit" onclick="editMusic('${track.musicIdResponse}')">Chỉnh Sửa</button>
+                                        <button class="btn btn-danger" onclick="deleteMusic('${track.musicIdResponse}')">Xóa</button>
+                                    </td>
+                                </tr>`;
+                            musicTableBody.innerHTML += row;
+                        });
+                    } else {
+                        console.error('Dữ liệu không hợp lệ hoặc thiếu thông tin.');
+                    }
+                })
+                .catch((error) => {
+                    console.error('Lỗi khi lấy dữ liệu âm nhạc:', error);
+                });
+        }
+    
+        // Hàm chuyển đổi giữa bảng người dùng và bảng âm nhạc
+        function showTable(tableName) {
+            const userTable = document.getElementById("userTable");
+            const musicTable = document.getElementById("musicTable");
+    
+            if (tableName === 'user') {
+                userTable.classList.remove("hidden");
+                musicTable.classList.add("hidden");
+                fetchUsers(); // Fetch user data khi chuyển sang tab User
+            } else if (tableName === 'music') {
+                musicTable.classList.remove("hidden");
+                userTable.classList.add("hidden");
+                //fetchMusic(); // Fetch music data khi chuyển sang tab Music
+            }
+        }
+
+        function fetchUsers() {
+            const token = localStorage.getItem('authToken'); // Lấy token từ localStorage
+        
+            // Kiểm tra token trước khi gửi yêu cầu
+            if (!token) {
+                alert('Bạn phải đăng nhập để truy cập trang này.');
+                window.location.href = '/login.html'; // Chuyển hướng về trang đăng nhập nếu không có token
+                return;
+            }
+        
+            // Cấu hình yêu cầu
+            const requestOptions = {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json',
+                },
+            };
+        
+            // Gửi yêu cầu đến API
+            fetch('http://localhost:8181/api/admin/users', requestOptions)
+                .then((response) => {
+                    if (!response.ok) {
+                        alert('Lỗi khi lấy danh sách người dùng hoặc token không hợp lệ.');
+                        window.location.href = '/login.html'; // Chuyển hướng nếu xảy ra lỗi xác thực
+                        throw new Error('Không thể lấy dữ liệu người dùng.');
+                    }
+                    return response.json(); // Trả về dữ liệu JSON
+                })
+                .then((responseData) => {
+                    if (responseData && responseData.data && responseData.data.items) {
+                        const userTableBody = document.querySelector('#userTableBody');
+                        userTableBody.innerHTML = ''; // Xóa nội dung cũ trong bảng
+        
+                        // Duyệt qua danh sách người dùng và thêm vào bảng
+                        responseData.data.items.forEach((user) => {
+                            const row = `
+                                <tr>
+                                    <td>${user.userNameResponse || 'Không có tên người dùng'}</td>
+                                    <td>${user.emailResponse || 'Không có email'}</td>
+                                    <td>${user.fullNameResponse || 'Không có tên đầy đủ'}</td>
+                                    <td>${user.phoneNumberResponse || 'Không có số điện thoại'}</td>
+                                    <td>${user.walletIdResponse !== null ? user.walletIdResponse : 'Chưa liên kết ví'}</td>
+                                    <td>
+                                        <button class="btn btn-primary" onclick="editUser('${user.userIdResponse}')">Chỉnh sửa</button>
+                                        <button class="btn btn-danger" onclick="deleteUser('${user.userIdResponse}')">Xóa</button>
+                                    </td>
+                                </tr>`;
+                            userTableBody.innerHTML += row;
+                        });
+                    } else {
+                        console.error('Dữ liệu không hợp lệ hoặc thiếu thông tin.');
+                        alert('Không tìm thấy người dùng nào.');
+                    }
+                })
+                .catch((error) => {
+                    console.error('Lỗi khi lấy dữ liệu người dùng:', error);
+                    alert('Đã xảy ra lỗi trong quá trình tải dữ liệu.');
+                });
+        }
+        
+        // Đảm bảo hàm fetchUsers đã được định nghĩa trước đó
+
+        // Chạy hàm fetchUsers khi trang tải
+        window.onload = function () {
+            fetchUsers(); // Gọi hàm fetchUsers
+            console.log('Trang đã tải và fetchUsers được gọi');
+        };
+
+        // Hàm đăng xuất
+        function logout() {
+            // Xóa token khỏi localStorage
+            localStorage.removeItem('authToken');
+    
+            // Chuyển hướng về trang đăng nhập
+            window.location.href = '/Login.html';
+        }
+    </script>
+    
+    
+</body>
+
+</html>

@@ -1,0 +1,39 @@
+server:
+  port: 8181
+
+spring:
+  config:
+    activate:
+      on-profile: dev
+  datasource:
+    url: jdbc:mysql://localhost:3306/PBL6
+    username: root
+    password: 123456
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+  flyway:
+    locations: classpath:/db/migration
+    baseline-on-migrate: true
+    baseline-version: 0
+  jackson:
+    date-format: yyyy-MM-dd
+    time-zone: UTC
+    serialization:
+      WRITE_DATES_AS_TIMESTAMPS: false
+
+payment:
+  vnPay:
+    url: https://sandbox.vnpayment.vn/paymentv2/vpcpay.html
+    tmnCode: Y7AUI2TQ
+    secretKey: 5GJ91M1F4B7SL17JOWRYUATA7RL47U1N
+    returnUrl: http://localhost:8181/api/payment/vn-pay-callback
+    version: 2.1.0
+    command: pay
+    orderType: other
+
+

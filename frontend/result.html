@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Download Your Generated Music</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+  <style>
+    body {
+      background: linear-gradient(135deg, #007bff, #6c757d);
+      color: #f8f9fa;
+      font-family: 'Arial', sans-serif;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .container {
+      max-width: 600px;
+      padding: 30px;
+      background-color: #ffffff;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 28px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      color: #343a40;
+    }
+
+    p {
+      font-size: 18px;
+      color: #6c757d;
+      margin-bottom: 20px;
+    }
+
+    .btn-primary {
+      background-color: #28a745;
+      border-color: #28a745;
+      font-size: 16px;
+      padding: 12px 24px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #218838;
+      border-color: #1e7e34;
+    }
+
+    .btn-secondary {
+      margin-top: 15px;
+      background-color: #007bff;
+      border-color: #007bff;
+      font-size: 16px;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      color: #ffffff;
+      display: inline-block;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-secondary:hover {
+      background-color: #0056b3;
+      border-color: #004085;
+    }
+
+    .success-message, .error-message {
+      margin-top: 20px;
+      font-size: 18px;
+      display: none;
+    }
+
+    .success-message {
+      color: #28a745;
+    }
+
+    .error-message {
+      color: #dc3545;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Your Generated Music</h1>
+    <p>The music file has been successfully generated. You can download it below:</p>
+
+    <button id="playBtn" class="btn btn-primary">Play</button>
+    
+    <!-- Nút download -->
+    <button id="downloadBtn" class="btn btn-primary">Download Now</button>
+
+    <!-- Thông báo lỗi -->
+    <p id="errorMessage" class="error-message">No file available for download.</p>
+
+    <!-- Thông báo thành công -->
+    <p id="successMessage" class="success-message">Download successful! Redirecting to home page...</p>
+
+    <!-- Nút quay về trang chủ -->
+    <a href="/" id="homeButton" class="btn btn-secondary" style="display: none;">Go to Home</a>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tonejs/midi"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tone/14.8.42/Tone.min.js"></script>
+  <script src="js/result.js"></script>
+</body>
+</html>

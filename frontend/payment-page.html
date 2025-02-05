@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thanh Toán</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <style>
+        /* Thu nhỏ kích thước mã QR */
+        #qr-code {
+            width: 400px; /* Điều chỉnh chiều rộng mã QR */
+            height: 400px; /* Điều chỉnh chiều cao mã QR */
+            margin-bottom: 60px; /* Khoảng cách dưới mã QR */
+        }
+
+        /* Đảm bảo nút quay lại ở giữa trang */
+        #back-button {
+            display: block;
+            margin: 30px auto 0;
+            text-align: center;
+        }
+    </style>
+    <script>
+        document.addEventListener("DOMContentLoaded", async function () {
+            // Lấy musicId từ URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const musicId = urlParams.get("musicId");
+
+            if (!musicId) {
+                document.getElementById("payment-container").innerHTML = "<p class='text-danger'>Không tìm thấy ID bài hát.</p>";
+                return;
+            }
+            // Giả lập API lấy thông tin bài hát (Thay bằng API thật)
+            try {
+                // Lấy token từ localStorage
+                const token = localStorage.getItem('authToken'); // Thay 'token' bằng key mà bạn lưu token
+                if (!token) {
+                    throw new Error('Token không tồn tại. Bạn cần đăng nhập lại.');
+                }
+                const response = await fetch(`http://localhost:8181/api/user/musics/${musicId}`, {
+                    method: 'GET',
+                    headers: {
+                        'Authorization': `Bearer ${token}`, // Gửi token qua header Authorization
+                        'Content-Type': 'application/json',
+                    }
+                });
+                if (!response.ok) throw new Error("Không thể tải thông tin bài hát.");               
+
+                // Lấy dữ liệu từ response và truy cập vào data
+                const jsonResponse = await response.json();
+                // Kiểm tra mã trả về trong response
+                if (jsonResponse.code !== 1010) {
+                    throw new Error(jsonResponse.message || "Lỗi khi lấy dữ liệu");
+                }
+                const song = jsonResponse.data; // Lấy dữ liệu bài hát từ data
+                // Cập nhật thông tin bài hát vào giao diện
+                document.getElementById("music-title").innerText = song.titleResponse || "Không rõ";
+                document.getElementById("music-category").innerText = song.categoryIdResponse === 1 ? "Monotone" : "Multitone";
+                document.getElementById("music-price").innerText = song.priceResponse ? song.priceResponse + " VND" : "Miễn phí";
+                document.getElementById("music-id").value = song.musicIdResponse; // Để xử lý thanh toán
+
+                let MY_BANK = {
+                    BANK_ID : "TPB",
+                    ACCOUNT_ID : "17926042003"
+                }
+
+                const qrUrl = `https://img.vietqr.io/image/${MY_BANK.BANK_ID}-${MY_BANK.ACCOUNT_ID}-qr_only.png?amount=${song.priceResponse}&addInfo=thanh%20toan%20bai%20hat%20id%3D${song.musicIdResponse}`;
+                document.getElementById("qr-code").src = qrUrl;
+            
+            } catch (error) {
+                console.error(error);
+                document.getElementById("payment-container").innerHTML = "<p class='text-danger'>Lỗi khi tải thông tin bài hát.</p>";
+            }
+        });
+    </script>
+</head>
+<body class="container mt-5">
+    <h2 class="text-center">Thanh Toán Bài Hát</h2>
+
+    <div id="payment-container" class="card p-4 shadow-lg">
+        <p><strong>Tên bài hát:</strong> <span id="music-title">Đang tải...</span></p>
+        <p><strong>Thể loại:</strong> <span id="music-category">Đang tải...</span></p>
+        <p><strong>Giá:</strong> <span id="music-price">Đang tải...</span></p>
+
+        <input type="hidden" id="music-id">
+        <!-- Thẻ <img> để hiển thị mã QR -->
+        <p><strong>Mã QR Thanh Toán:</strong></p>
+        <img id="qr-code" src="" alt="QR code thanh toán" />
+
+        <!-- Nút quay lại -->
+        <a id="back-button" href="user-profile.html" class="btn btn-secondary">Quay lại Trang Cá Nhân</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c4282aaa-a1be-42f6-9b30-04803db41eba" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/pbl6/music/mapper/CategoryMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/pbl6/music/mapper/CategoryMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/pbl6/music/mapper/MusicMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/pbl6/music/mapper/MusicMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/pbl6/music/mapper/PurchaseMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/pbl6/music/mapper/PurchaseMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/pbl6/music/mapper/UserMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/pbl6/music/mapper/UserMapperImpl.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="com.intellij.jpb.FlywayMigrationScript" />
+        <option value="Interface" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;TrungNhan26&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/BinBin264/music_generation.git",
+    "accountId": "f3abdff7-15bc-4e7d-ab0b-eee223ef4d7b"
+  }
+}]]></component>
+  <component name="JpbToolWindowState">
+    <option name="isToolWindowVisible" value="false" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2nmDUVvFShJbgn72hJ811TG6fgn" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.UpdatePasswordWithEncryption.executor": "Run",
+    "Application.encode.executor": "Run",
+    "Application.zuizui (1).executor": "Run",
+    "Application.zuizui (2).executor": "Run",
+    "Application.zuizui.executor": "Run",
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "Spring Boot.TechlearnApplication.executor": "Run",
+    "git-widget-placeholder": "main",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/ASUS/OneDrive - The University of Technology/Desktop/music_generation/backend",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "mysql_aurora"
+    ]
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ASUS\OneDrive - The University of Technology\Desktop\pbl6\PBL6_BE1\.jpb" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ASUS\OneDrive - The University of Technology\Desktop\pbl6\PBL6_BE1\src\main\resources\static\music\" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="com.pbl6.music.service" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.TechlearnApplication">
+    <configuration name="UpdatePasswordWithEncryption" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="UpdatePasswordWithEncryption" />
+      <module name="PBL6_BE" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="encode" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.pbl6.music.service.impl.encode" />
+      <module name="PBL6_BE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pbl6.music.service.impl.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="zuizui (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.pbl6.music.controller.zuizui" />
+      <module name="PBL6_BE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pbl6.music.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="zuizui (2)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.pbl6.music.controller.zuizui" />
+      <module name="PBL6_BE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pbl6.music.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="zuizui" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.pbl6.music.controller.zuizui" />
+      <module name="PBL6_BE" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.pbl6.music.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TechlearnApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <option name="ACTIVE_PROFILES" value="dev" />
+      <module name="PBL6_BE" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.pbl6.music.TechlearnApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.encode" />
+        <item itemvalue="Application.UpdatePasswordWithEncryption" />
+        <item itemvalue="Application.zuizui (2)" />
+        <item itemvalue="Application.zuizui (1)" />
+        <item itemvalue="Application.zuizui" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-28b599e66164-intellij.indexing.shared.core-IU-242.23339.11" />
+        <option value="bundled-js-predefined-d6986cc7102b-5c90d61e3bab-JavaScript-IU-242.23339.11" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c4282aaa-a1be-42f6-9b30-04803db41eba" name="Changes" comment="" />
+      <created>1729569374990</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729569374990</updated>
+      <workItem from="1729569376779" duration="16857000" />
+      <workItem from="1729622220215" duration="4000" />
+      <workItem from="1729657326043" duration="13588000" />
+      <workItem from="1729736289242" duration="115000" />
+      <workItem from="1729736575513" duration="6260000" />
+      <workItem from="1729757960768" duration="10008000" />
+      <workItem from="1729791149332" duration="8750000" />
+      <workItem from="1729826801533" duration="8291000" />
+      <workItem from="1729997820502" duration="17748000" />
+      <workItem from="1730209907961" duration="24441000" />
+      <workItem from="1730342946696" duration="5844000" />
+      <workItem from="1730571383504" duration="3607000" />
+      <workItem from="1730637410327" duration="9372000" />
+      <workItem from="1730693865073" duration="1803000" />
+      <workItem from="1730790180224" duration="1668000" />
+      <workItem from="1730961060537" duration="5789000" />
+      <workItem from="1731074417413" duration="8075000" />
+      <workItem from="1731199308693" duration="48117000" />
+      <workItem from="1731381324029" duration="35303000" />
+      <workItem from="1731638303036" duration="3917000" />
+      <workItem from="1731657990588" duration="226000" />
+      <workItem from="1731658433961" duration="20471000" />
+      <workItem from="1732207321603" duration="3976000" />
+      <workItem from="1732988139160" duration="8099000" />
+      <workItem from="1733065956276" duration="1364000" />
+      <workItem from="1733220247816" duration="1873000" />
+      <workItem from="1733233238376" duration="1266000" />
+      <workItem from="1733254866601" duration="94000" />
+      <workItem from="1733256718677" duration="627000" />
+      <workItem from="1733278933364" duration="655000" />
+      <workItem from="1733639293031" duration="1547000" />
+      <workItem from="1733684981424" duration="3090000" />
+      <workItem from="1734292075102" duration="817000" />
+      <workItem from="1736777415311" duration="8231000" />
+      <workItem from="1736864495869" duration="6350000" />
+      <workItem from="1737124405212" duration="16354000" />
+      <workItem from="1737381628613" duration="4810000" />
+      <workItem from="1737392615991" duration="1005000" />
+      <workItem from="1737423061388" duration="1049000" />
+      <workItem from="1737429917896" duration="4673000" />
+      <workItem from="1737563081543" duration="759000" />
+      <workItem from="1737594038218" duration="12361000" />
+      <workItem from="1738556147779" duration="1072000" />
+      <workItem from="1738557572818" duration="15377000" />
+      <workItem from="1738751204844" duration="688000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
