@@ -72,7 +72,7 @@ public class MusicServiceImpl implements IMusicService {
             System.out.println(composerUserName);
             UserEntity composer = userRepository.findUserByUsername(composerUserName).orElseThrow(() -> new RuntimeException("Composer not found"));
             musicEntity.setComposer(composer);
-            musicEntity.setPrice(BigDecimal.valueOf(9.99));  // Giá trị tạm thời
+            musicEntity.setPrice(BigDecimal.valueOf(10000));  // Giá trị tạm thời
             musicEntity.setPurchased(false);  // Giá trị mặc định
             musicEntity.setFullUrl("http://example.com/xxx");
             CategoryEntity category = categoryRepository.findByCategoryId(categoryId);

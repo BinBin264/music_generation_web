@@ -17,7 +17,8 @@ public interface MusicRepository extends JpaRepository<MusicEntity, Long> {
             m.fullUrl, 
             m.price, 
             m.isPurchased, 
-            m.composer.userId, 
+            m.composer.userId,
+            m.composer.userName, 
             m.category.categoryId )
         from MusicEntity m where m.isPurchased = false
         """)
@@ -30,7 +31,8 @@ public interface MusicRepository extends JpaRepository<MusicEntity, Long> {
         m.fullUrl, 
         m.price, 
         m.isPurchased,  
-        m.composer.userId, 
+        m.composer.userId,
+        m.composer.userName,
         m.category.categoryId)
     from MusicEntity m 
     where m.composer.userName = :composerUserName

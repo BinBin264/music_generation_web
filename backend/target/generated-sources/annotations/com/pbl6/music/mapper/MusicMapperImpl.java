@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2025-02-05T17:27:28+0700",
+    date = "2025-02-09T19:55:01+0700",
     comments = "version: 1.5.5.Final, compiler: javac, environment: Java 19.0.1 (Oracle Corporation)"
 )
 @Component
@@ -28,6 +28,7 @@ public class MusicMapperImpl implements MusicMapper {
         musicResponseDTO.setMusicIdResponse( musicEntity.getMusicId() );
         musicResponseDTO.setTitleResponse( musicEntity.getTitle() );
         musicResponseDTO.setComposerIdResponse( musicEntityComposerUserId( musicEntity ) );
+        musicResponseDTO.setComposerNameResponse( musicEntityComposerUserName( musicEntity ) );
         musicResponseDTO.setFullUrlResponse( musicEntity.getFullUrl() );
         musicResponseDTO.setPriceResponse( musicEntity.getPrice() );
         musicResponseDTO.setPurchasedResponse( musicEntity.isPurchased() );
@@ -68,6 +69,21 @@ public class MusicMapperImpl implements MusicMapper {
             return null;
         }
         return userId;
+    }
+
+    private String musicEntityComposerUserName(MusicEntity musicEntity) {
+        if ( musicEntity == null ) {
+            return null;
+        }
+        UserEntity composer = musicEntity.getComposer();
+        if ( composer == null ) {
+            return null;
+        }
+        String userName = composer.getUserName();
+        if ( userName == null ) {
+            return null;
+        }
+        return userName;
     }
 
     private Long musicEntityCategoryCategoryId(MusicEntity musicEntity) {

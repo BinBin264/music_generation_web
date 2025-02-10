@@ -46,16 +46,3 @@ CREATE TABLE musics
     CONSTRAINT FK_MUSICS_ON_COMPOSER FOREIGN KEY (composer_id) REFERENCES users (user_id)
 );
 
--- Bảng purchases có khóa ngoại tới users và musics
-CREATE TABLE purchases
-(
-    purchase_id   BIGINT AUTO_INCREMENT NOT NULL,
-    buyer_id      BINARY(16) NOT NULL,
-    music_id      BIGINT     NOT NULL,
-    purchase_date datetime   NOT NULL,
-    amount        DECIMAL(10, 2) NOT NULL,
-    CONSTRAINT pk_purchases PRIMARY KEY (purchase_id),
-    CONSTRAINT uc_92cdb7e65736f9b80a090a011 UNIQUE (music_id),
-    CONSTRAINT FK_PURCHASES_ON_BUYER FOREIGN KEY (buyer_id) REFERENCES users (user_id),
-    CONSTRAINT FK_PURCHASES_ON_MUSIC FOREIGN KEY (music_id) REFERENCES musics (music_id)
-);

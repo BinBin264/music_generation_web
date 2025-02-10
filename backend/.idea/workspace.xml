@@ -5,11 +5,53 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c4282aaa-a1be-42f6-9b30-04803db41eba" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pbl6/music/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pbl6/music/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pbl6/music/config/VNPayConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pbl6/music/config/VNPayConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pbl6/music/controller/PaymentController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pbl6/music/controller/PaymentController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pbl6/music/dto/response/MusicResponseDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pbl6/music/dto/response/MusicResponseDTO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pbl6/music/dto/response/PurchaseResponseDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pbl6/music/entity/MusicEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pbl6/music/entity/MusicEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pbl6/music/entity/PurchaseEntity.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pbl6/music/entity/UserEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pbl6/music/entity/UserEntity.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pbl6/music/mapper/MusicMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pbl6/music/mapper/MusicMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pbl6/music/mapper/PurchaseMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pbl6/music/repository/MusicRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pbl6/music/repository/MusicRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pbl6/music/service/IPaymentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pbl6/music/service/IPaymentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pbl6/music/service/impl/MusicServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pbl6/music/service/impl/MusicServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pbl6/music/service/impl/PaymentServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pbl6/music/service/impl/PaymentServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/pbl6/music/util/VNPayUtil.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/pbl6/music/util/VNPayUtil.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V0__Initdb.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V0__Initdb.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__Insert.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/db/migration/V1__Insert.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pbl6/music/config/SecurityConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pbl6/music/config/SecurityConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pbl6/music/config/VNPayConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pbl6/music/controller/PaymentController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pbl6/music/dto/response/MusicResponseDTO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pbl6/music/dto/response/MusicResponseDTO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pbl6/music/dto/response/PurchaseResponseDTO.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pbl6/music/entity/MusicEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pbl6/music/entity/MusicEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pbl6/music/entity/PurchaseEntity.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pbl6/music/entity/UserEntity$UserEntityBuilder.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pbl6/music/entity/UserEntity$UserEntityBuilder.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pbl6/music/entity/UserEntity.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pbl6/music/entity/UserEntity.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pbl6/music/mapper/MusicMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pbl6/music/mapper/MusicMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pbl6/music/mapper/MusicMapperImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pbl6/music/mapper/MusicMapperImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pbl6/music/mapper/PurchaseMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pbl6/music/mapper/PurchaseMapperImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pbl6/music/repository/MusicRepository.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pbl6/music/repository/MusicRepository.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pbl6/music/service/IPaymentService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pbl6/music/service/impl/MusicServiceImpl.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/pbl6/music/service/impl/MusicServiceImpl.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pbl6/music/service/impl/PaymentServiceImpl.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/pbl6/music/util/VNPayUtil.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V0__Initdb.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/migration/V0__Initdb.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/db/migration/V1__Insert.sql" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/db/migration/V1__Insert.sql" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/pbl6/music/mapper/CategoryMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/pbl6/music/mapper/CategoryMapperImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/pbl6/music/mapper/MusicMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/pbl6/music/mapper/MusicMapperImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/pbl6/music/mapper/PurchaseMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/pbl6/music/mapper/PurchaseMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/pbl6/music/mapper/PurchaseMapperImpl.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/generated-sources/annotations/com/pbl6/music/mapper/UserMapperImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/target/generated-sources/annotations/com/pbl6/music/mapper/UserMapperImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/js/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/js/home.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/js/user_profile.js" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/js/user_profile.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/payment-page.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/payment-page.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../frontend/user-profile.html" beforeDir="false" afterPath="$PROJECT_DIR$/../frontend/user-profile.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,12 +77,12 @@
     &quot;assignee&quot;: &quot;TrungNhan26&quot;
   }
 }</component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/BinBin264/music_generation.git",
-    "accountId": "f3abdff7-15bc-4e7d-ab0b-eee223ef4d7b"
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/BinBin264/music_generation_web&quot;,
+    &quot;accountId&quot;: &quot;f3abdff7-15bc-4e7d-ab0b-eee223ef4d7b&quot;
   }
-}]]></component>
+}</component>
   <component name="JpbToolWindowState">
     <option name="isToolWindowVisible" value="false" />
   </component>
@@ -66,36 +108,36 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.UpdatePasswordWithEncryption.executor": "Run",
-    "Application.encode.executor": "Run",
-    "Application.zuizui (1).executor": "Run",
-    "Application.zuizui (2).executor": "Run",
-    "Application.zuizui.executor": "Run",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "Spring Boot.TechlearnApplication.executor": "Run",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/ASUS/OneDrive - The University of Technology/Desktop/music_generation/backend",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.UpdatePasswordWithEncryption.executor&quot;: &quot;Run&quot;,
+    &quot;Application.encode.executor&quot;: &quot;Run&quot;,
+    &quot;Application.zuizui (1).executor&quot;: &quot;Run&quot;,
+    &quot;Application.zuizui (2).executor&quot;: &quot;Run&quot;,
+    &quot;Application.zuizui.executor&quot;: &quot;Run&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;Spring Boot.TechlearnApplication.executor&quot;: &quot;Run&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ASUS/OneDrive - The University of Technology/Desktop/New folder/music_generation_web/backend&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "mysql_aurora"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql_aurora&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ASUS\OneDrive - The University of Technology\Desktop\pbl6\PBL6_BE1\.jpb" />
@@ -246,6 +288,12 @@
       <workItem from="1738556147779" duration="1072000" />
       <workItem from="1738557572818" duration="15377000" />
       <workItem from="1738751204844" duration="688000" />
+      <workItem from="1738934054342" duration="9429000" />
+      <workItem from="1739000571486" duration="1883000" />
+      <workItem from="1739005831141" duration="1785000" />
+      <workItem from="1739016753772" duration="1733000" />
+      <workItem from="1739084438312" duration="2351000" />
+      <workItem from="1739147528213" duration="1898000" />
     </task>
     <servers />
   </component>

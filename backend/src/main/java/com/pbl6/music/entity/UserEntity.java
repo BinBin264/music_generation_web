@@ -42,7 +42,4 @@ public class UserEntity extends BaseEntity {
     @OneToMany(mappedBy = "composer", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     private List<MusicEntity> music;
 
-    @OneToMany(mappedBy = "buyer", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
-    private Set<PurchaseEntity> purchases; // Liên kết với bảng Purchases
-
 }

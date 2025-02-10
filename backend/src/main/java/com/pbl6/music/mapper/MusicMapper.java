@@ -12,7 +12,8 @@ public interface MusicMapper {
      // Chuyển từ MusicEntity sang MusicResponseDTO
     @Mapping(source = "musicId", target = "musicIdResponse")
     @Mapping(source = "title", target = "titleResponse")
-    @Mapping(source = "composer.userId", target = "composerIdResponse")// Tên người soạn nhạc
+    @Mapping(source = "composer.userId", target = "composerIdResponse")
+    @Mapping(source = "composer.userName", target = "composerNameResponse")// Tên người soạn nhạc
     @Mapping(source = "fullUrl", target = "fullUrlResponse")
     @Mapping(source = "price", target = "priceResponse")
     @Mapping(source = "purchased", target = "purchasedResponse")

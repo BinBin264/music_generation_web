@@ -41,6 +41,4 @@ public class MusicEntity {
     @JoinColumn(name = "category_id")
     private CategoryEntity category;
 
-    @OneToOne(mappedBy = "musicEntity")
-    private PurchaseEntity purchaseEntities;
 }

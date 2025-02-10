@@ -280,10 +280,10 @@ async function handleCreateMusic() {
     } else if (currentTab === 'multitone') {
       categoryId = 2;
       if (isMidiUploadedMultitone) {
-        apiUrl = 'http://localhost:8000/roll-gen-melody-with-midi-multitone';
+        apiUrl = 'http://localhost:8000/nhan-gen-melody-with-midi-multitone';
         midiFile = document.getElementById('multitoneMidi').files[0];
       } else if (!document.getElementById('multitoneToggle').checked) {
-        apiUrl = 'http://localhost:8000/roll-gen-melody-without-midi-multitone';
+        apiUrl = 'http://localhost:8000/hoang-gen-melody-without-midi-multitone';
       }
     }
 
@@ -311,8 +311,11 @@ async function handleCreateMusic() {
 
     const formData = new FormData();
     formData.append('username', username);
-    console.log(username);
-    formData.append('file', midiFile);
+
+    // 🔥 Chỉ append file nếu có
+    if (midiFile) {
+      formData.append('file', midiFile);
+    }
 
     const fastApiResponse = await fetch(apiUrl, {
       method: 'POST',
@@ -324,7 +327,7 @@ async function handleCreateMusic() {
     }
 
     // Redirect to profile page on success
-    alert("bạn cần thanh toán để nghe nhạc ở trang chủ hoặc tải về ở thông tin người dùng")
+    alert("Bạn cần thanh toán để nghe nhạc ở trang chủ hoặc tải về ở thông tin người dùng");
     window.location.href = 'user-profile.html';
   } catch (error) {
     console.error('Lỗi khi gửi yêu cầu:', error);
@@ -335,6 +338,7 @@ async function handleCreateMusic() {
     processingMessage.style.display = 'none';
   }
 }
+
 
 
 

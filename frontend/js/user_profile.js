@@ -129,6 +129,11 @@ window.onload = async function () {
                      Pay Now
                    </a>`}
             </td>
+            <td>
+              <button class="btn btn-warning" onclick="editMusicTitle('${song.musicIdResponse}', '${song.titleResponse}')">
+                Edit
+              </button>
+            </td>
           </tr>`;
         
         musicList.innerHTML += row;
@@ -205,7 +210,7 @@ window.onload = async function () {
         <p><strong>Email:</strong> ${emailResponse}</p>
         <p><strong>Full Name:</strong> ${fullNameResponse}</p>
         <p><strong>Phone Number:</strong> ${phoneNumberResponse}</p>
-        <button class="btn btn-secondary" onclick="goBack()">Back to Home</button>
+        <button onclick="window.location.href='home.html'" class="btn btn-secondary">Back to Home</button>
       `;
       
       userInfo.innerHTML = userInfoSection;
@@ -215,6 +220,66 @@ window.onload = async function () {
       alert('Could not load user information. Please try again.');
     }
   }
+  
+  function searchMusic() {
+    const searchInput = document.getElementById("searchInput").value.toLowerCase();
+    const musicList = document.getElementById("music-list");
+    const rows = musicList.getElementsByTagName("tr");
+  
+    for (let i = 0; i < rows.length; i++) {
+      const titleCell = rows[i].getElementsByTagName("td")[1]; // Cột chứa tên bài hát
+      if (titleCell) {
+        const titleText = titleCell.textContent || titleCell.innerText;
+        if (titleText.toLowerCase().includes(searchInput)) {
+          rows[i].style.display = ""; // Hiển thị dòng nếu khớp
+        } else {
+          rows[i].style.display = "none"; // Ẩn dòng nếu không khớp
+        }
+      }
+    }
+  }
+
+  let editingMusicId = null;
+
+function editMusicTitle(musicId, currentTitle) {
+  editingMusicId = musicId;
+  document.getElementById("newTitle").value = currentTitle;
+  document.getElementById("editModal").style.display = "block";
+}
+
+function closeModal() {
+  document.getElementById("editModal").style.display = "none";
+}
+
+async function saveMusicTitle() {
+  const newTitle = document.getElementById("newTitle").value;
+  if (!newTitle.trim()) {
+    alert("Title cannot be empty!");
+    return;
+  }
+  
+  try {
+    const response = await fetch(`http://localhost:8000/api/music/${editingMusicId}/update-title`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({ new_title: newTitle }),
+    });
+
+    if (!response.ok) {
+      throw new Error("Failed to update music title.");
+    }
+
+    alert("Music title updated successfully!");
+    closeModal();
+  } catch (error) {
+    console.error("Error updating music title:", error);
+    alert("Error updating music title.");
+  }
+  fetchMusic(localStorage.getItem("authToken"), localStorage.getItem("authUserName"));
+}
+
   
   
   

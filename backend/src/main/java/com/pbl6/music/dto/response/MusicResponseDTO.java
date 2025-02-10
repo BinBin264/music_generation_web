@@ -15,7 +15,8 @@ public class MusicResponseDTO {
     private String fullUrlResponse;          // URL đầy đủ của bản nhạc
     private BigDecimal priceResponse;        // Giá của bản nhạc
     private boolean isPurchasedResponse;     // Trạng thái đã mua hay chưa
-    private UUID composerIdResponse;     // id người soạn nhạc
+    private UUID composerIdResponse;
+    private String composerNameResponse;// id người soạn nhạc
     private Long categoryIdResponse;     // id danh mục của bản nhạc
 
     //private Long purchaseIdResponse;         // ID của giao dịch mua (nếu có)

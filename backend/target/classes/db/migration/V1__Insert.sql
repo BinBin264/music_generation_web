@@ -5,14 +5,6 @@ VALUES
 
 INSERT INTO categories (category_id,category_name)
 VALUES
-(1,'Mono tone'),
-(2,'Multi tone');
-
-INSERT INTO musics (title, composer_id, full_url, price, is_purchased, category_id)
-VALUES
-('Clair de Lune', (SELECT user_id FROM users WHERE user_name = 'SONTung-MTP'), 'http://example.com/clairdelune', 9.99, 0, 1);
-
-INSERT INTO purchases (purchase_id, buyer_id, music_id, purchase_date, amount)
-VALUES
-(1,(SELECT user_id FROM users WHERE user_name = 'SONTung-MTP'), 1, NOW(), 10.99);
+(1,'Monotone'),
+(2,'Multitone');
 
